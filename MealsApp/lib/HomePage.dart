@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './categories/CategoriesScreen.dart';
+
 class HomePage extends StatefulWidget {
   final String title;
   HomePage(this.title);
@@ -14,9 +16,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: Text("Some Text"),
-      ),
+      body: CategoriesScreen(),
     );
   }
 }

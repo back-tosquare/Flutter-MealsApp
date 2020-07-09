@@ -10,7 +10,7 @@ class MyTheme {
         ),
       ),
       primaryColor: Colors.blueAccent,
-      primarySwatch: Colors.green,
+      primarySwatch: Colors.blue,
       secondaryHeaderColor: Colors.green,
     );
   }
