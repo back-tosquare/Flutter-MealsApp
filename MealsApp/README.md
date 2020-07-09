@@ -2,8 +2,8 @@
 
 A new Flutter project.
 
-Timeline : 
+App Timeline : 
 
-1. Testing GIT Commits
-2. Merging Back to Master
+1. Basic Template
+
 
