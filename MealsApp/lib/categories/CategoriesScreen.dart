@@ -2,20 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import './properties/MySliverGrid.dart';
-import './CategoryItem.dart';
-import './dummyData.dart';
+import './properties/GridChildren.dart';
 
 class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView(
-      children: DUMMY_CATEGORIES
-          .map((category) => CategoryItem(
-                id: category.id,
-                title: category.title,
-                color: category.color,
-              ))
-          .toList(),
+      padding: EdgeInsets.all(15),
+      children: gridChildren,
       gridDelegate: const MySliverGrid(),
     );
   }

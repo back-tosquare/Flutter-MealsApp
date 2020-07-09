@@ -5,7 +5,7 @@ class MyTheme {
     return ThemeData(
       textTheme: TextTheme(
         headline6: TextStyle(
-          fontSize: 16,
+          fontSize: 18,
           fontWeight: FontWeight.bold,
         ),
       ),

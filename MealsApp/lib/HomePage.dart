@@ -2,19 +2,11 @@ import 'package:flutter/material.dart';
 
 import './categories/CategoriesScreen.dart';
 
-class HomePage extends StatefulWidget {
-  final String title;
-  HomePage(this.title);
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
+class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text("My Categories"),
       ),
       body: CategoriesScreen(),
     );
