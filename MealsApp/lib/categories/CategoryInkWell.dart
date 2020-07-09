@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './CategoryItem.dart';
+import '../RecepiesPage.dart';
 
 class CategoryInkWell extends StatelessWidget {
   final String title;
@@ -12,14 +13,21 @@ class CategoryInkWell extends StatelessWidget {
   CategoryInkWell(
       {@required this.title, @required this.color, @required this.id});
 
+  void tapHandler(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
+      return RecepiesPage();
+    }));
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      child: CategoryItem(
-          title: title, color: color, id: id, borderRadius: boderRadius),
-      splashColor: Theme.of(context).primaryColor,
-      borderRadius: boderRadius,
-      onTap: () {},
-    );
+        child: CategoryItem(
+            title: title, color: color, id: id, borderRadius: boderRadius),
+        splashColor: Theme.of(context).primaryColor,
+        borderRadius: boderRadius,
+        onTap: () {
+          tapHandler(context);
+        });
   }
 }
