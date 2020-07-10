@@ -3,16 +3,16 @@ import 'package:flutter/material.dart';
 import './recepies/MyRecepies.dart';
 
 class RecepiesPage extends StatelessWidget {
-  final String title;
-  final Color color;
-  final String id;
+  RecepiesPage();
 
-  RecepiesPage({@required this.title, @required this.id, @required this.color});
   @override
   Widget build(BuildContext context) {
+    final Map<String, Object> routeArguments =
+        ModalRoute.of(context).settings.arguments;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        title: Text(routeArguments["title"]),
       ),
       body: MyRecepies(),
     );

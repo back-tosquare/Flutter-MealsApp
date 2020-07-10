@@ -8,6 +8,7 @@ App Timeline :
 2. Categories Screen
 3. Improving Categories Screen
 4. Adding a Navigation Screen from Main Categories Screen
+5. Navigating to New Screen via Named Routes
 
 ![Image of Latest Screenshot](https://github.com/back-tosquare/Flutter-MealsApp/blob/master/MealsApp/assets/MyScreenshot.png)
 

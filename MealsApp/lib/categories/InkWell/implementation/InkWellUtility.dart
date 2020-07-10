@@ -7,12 +7,7 @@ class InkWellUtility {
       @required String id,
       @required String title,
       @required Color color}) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (_) {
-      return RecepiesPage(
-        id: id,
-        title: title,
-        color: color,
-      );
-    }));
+    Navigator.of(context).pushNamed('/recepies',
+        arguments: {"id": id, "title": title, "color": color});
   };
 }

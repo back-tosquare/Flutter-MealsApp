@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import './HomePage.dart';
 import './utility/GeneralTheme.dart';
+import './RecepiesPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -15,7 +16,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: title,
       theme: MyTheme().getThemeData(),
-      home: HomePage(),
+      routes: {
+        '/': (_) => HomePage(),
+        '/recepies': (_) => RecepiesPage(),
+      },
     );
   }
 }
