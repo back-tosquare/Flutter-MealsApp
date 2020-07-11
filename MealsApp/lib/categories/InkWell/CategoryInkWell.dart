@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './implementation/InkWellUtility.dart';
+import './configuration/InkWellUtility.dart';
 import '../CategoryItem.dart';
 
 class CategoryInkWell extends StatelessWidget {

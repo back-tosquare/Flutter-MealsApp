@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import './recepies/MyRecepies.dart';
 
 class RecepiesPage extends StatelessWidget {
+  static const String routeName = '/recepies';
+
   RecepiesPage();
 
   @override
@@ -10,11 +12,14 @@ class RecepiesPage extends StatelessWidget {
     final Map<String, Object> routeArguments =
         ModalRoute.of(context).settings.arguments;
 
+    final String title = routeArguments["title"];
+    final String categoryId = routeArguments["id"];
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(routeArguments["title"]),
+        title: Text(title),
       ),
-      body: MyRecepies(),
+      body: MyRecepies(categoryId),
     );
   }
 }

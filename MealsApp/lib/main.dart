@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: MyTheme().getThemeData(),
       routes: {
         '/': (_) => HomePage(),
-        '/recepies': (_) => RecepiesPage(),
+        RecepiesPage.routeName: (_) => RecepiesPage(),
       },
     );
   }

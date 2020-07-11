@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../InkWell/CategoryInkWell.dart';
-import '../dummyData.dart';
+import '../../dummyData.dart';
 
 List<Widget> gridChildren = DUMMY_CATEGORIES
     .map((category) => CategoryInkWell(

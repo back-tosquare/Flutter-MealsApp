@@ -7,7 +7,7 @@ class InkWellUtility {
       @required String id,
       @required String title,
       @required Color color}) {
-    Navigator.of(context).pushNamed('/recepies',
+    Navigator.of(context).pushNamed(RecepiesPage.routeName,
         arguments: {"id": id, "title": title, "color": color});
   };
 }
