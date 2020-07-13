@@ -4,18 +4,22 @@ import './RecepieConfig.dart';
 
 class RecepieCard extends StatelessWidget {
   final Widget child;
+  final Function onTapHandler;
 
-  RecepieCard(this.child);
+  RecepieCard({@required this.child, @required this.onTapHandler});
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: child,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(RecepieConfig.itemBorderRadius),
+    return InkWell(
+      onTap: onTapHandler,
+      child: Card(
+        child: child,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(RecepieConfig.itemBorderRadius),
+        ),
+        margin: EdgeInsets.all(15),
+        elevation: 4,
       ),
-      margin: EdgeInsets.all(15),
-      elevation: 4,
     );
   }
 }

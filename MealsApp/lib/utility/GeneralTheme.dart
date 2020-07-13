@@ -12,6 +12,7 @@ class MyTheme {
       primaryColor: Colors.blueAccent,
       primarySwatch: Colors.blue,
       secondaryHeaderColor: Colors.green,
+      accentColor: Colors.amber,
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './recepies/MyRecepies.dart';
+import './utility/DefaultPage.dart';
 
 class RecepiesPage extends StatelessWidget {
   static const String routeName = '/recepies';
@@ -15,11 +16,6 @@ class RecepiesPage extends StatelessWidget {
     final String title = routeArguments["title"];
     final String categoryId = routeArguments["id"];
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: MyRecepies(categoryId),
-    );
+    return DefaultPage(pageTitle: title, pageBody: MyRecepies(categoryId));
   }
 }
