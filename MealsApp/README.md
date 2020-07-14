@@ -12,6 +12,7 @@ App Timeline :
 6. Adding Recepies Screen. ( Meals via Network Images).
 7. Navigating to Recepie Inner Details Screen.
 8. Building Recepie Inner Details : Ingredients and Steps
+9. Adding Bottom Navigation Bar
 
 
 

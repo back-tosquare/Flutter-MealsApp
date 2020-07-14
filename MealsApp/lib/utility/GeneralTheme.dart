@@ -9,10 +9,12 @@ class MyTheme {
           fontWeight: FontWeight.bold,
         ),
       ),
-      primaryColor: Colors.blueAccent,
+      primaryColor: Colors.purple,
       primarySwatch: Colors.blue,
       secondaryHeaderColor: Colors.green,
       accentColor: Colors.amber,
+      primaryColorDark: Colors.black,
+      primaryColorLight: Colors.white,
     );
   }
 }

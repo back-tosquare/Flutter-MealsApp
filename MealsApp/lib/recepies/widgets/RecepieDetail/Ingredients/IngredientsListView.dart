@@ -9,8 +9,14 @@ class IngredientsListView extends StatelessWidget {
 
   IngredientsListView(this.item);
 
-  Color getCardColor(BuildContext context) {
-    return Theme.of(context).accentColor;
+  Widget getCardWidget(
+      {@required BuildContext context,
+      @required String text,
+      @required int index}) {
+    return CardView(
+      text: text,
+      color: Theme.of(context).accentColor,
+    );
   }
 
   List<String> get list {
@@ -28,10 +34,9 @@ class IngredientsListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListContainer(
-      childHandler: (content) => CardView(
-        text: content,
-        color: getCardColor(context),
-      ),
+      childHandler: ({@required String text, @required int index}) {
+        return getCardWidget(context: context, text: text, index: index);
+      },
       list: list,
       height: height,
       width: width,
