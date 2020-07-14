@@ -15,6 +15,7 @@ class MyTheme {
       accentColor: Colors.amber,
       primaryColorDark: Colors.black,
       primaryColorLight: Colors.white,
+      backgroundColor: Colors.purple[300],
     );
   }
 }

@@ -4,6 +4,7 @@ import './categories/CategoriesScreen.dart';
 import './utility/DefaultPage.dart';
 import './utility/BottomNavigation/MyBottomBar.dart';
 import './FavouritesPage.dart';
+import './Drawer/MyDrawer.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -38,6 +39,7 @@ class _HomePageState extends State<HomePage> {
         onTapHandler: (index) => _bottomBarPageSwitcher(index),
         currentIndex: _selectedPageIndex,
       ),
+      drawer: MyDrawer(),
     );
   }
 }
