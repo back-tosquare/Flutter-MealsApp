@@ -16,6 +16,7 @@ class MyTheme {
       primaryColorDark: Colors.black,
       primaryColorLight: Colors.white,
       backgroundColor: Colors.purple[300],
+      splashColor: Colors.amberAccent,
     );
   }
 }

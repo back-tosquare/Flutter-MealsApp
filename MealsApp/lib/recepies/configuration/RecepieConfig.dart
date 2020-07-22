@@ -1,4 +1,5 @@
 import '../../models/Meals.dart';
+import '../../dummyData.dart';
 
 class RecepieConfig {
   static double itemBorderRadius = 15;
@@ -21,5 +22,17 @@ class RecepieConfig {
             : (item.affordability == Affordability.Luxurious)
                 ? "Luxurious"
                 : "Unknown";
+  }
+
+  static List<Meal> getMealsList(bool favStatus, String categoryId) {
+    List<Meal> myMeals = DUMMY_MEALS
+        .where((element) => element.categories.contains(categoryId))
+        .toList();
+
+    List<Meal> filteredMeals = myMeals.where((element) {
+      return (favStatus) ? (element.isFavourite) : true;
+    }).toList();
+
+    return filteredMeals;
   }
 }

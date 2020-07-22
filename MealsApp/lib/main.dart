@@ -5,6 +5,7 @@ import './utility/GeneralTheme.dart';
 import './RecepiesPage.dart';
 import './RecepieDetailsPage.dart';
 import './utility/MyConfigurations.dart';
+import './FiltersPage.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,9 +23,10 @@ class MyApp extends StatelessWidget {
       title: title,
       theme: MyTheme().getThemeData(),
       routes: {
-        '/': (_) => HomePage(),
+        HomePage.routeName: (_) => HomePage(),
         RecepiesPage.routeName: (_) => RecepiesPage(),
         RecepieDetailsPage.routeName: (_) => RecepieDetailsPage(),
+        FiltersPage.routeName: (_) => FiltersPage(),
       },
     );
   }

@@ -12,7 +12,12 @@ enum Affordability {
   Luxurious,
 }
 
-class Meal {
+enum Selection {
+  All,
+  Favourites,
+}
+
+class Meal with ChangeNotifier {
   final String id;
   final List<String> categories;
   final String title;
@@ -26,8 +31,9 @@ class Meal {
   final bool isLactoseFree;
   final bool isVegan;
   final bool isVegetarian;
+  bool isFavourite = false;
 
-  const Meal({
+  Meal({
     @required this.id,
     @required this.categories,
     @required this.title,
@@ -42,4 +48,9 @@ class Meal {
     @required this.isVegan,
     @required this.isVegetarian,
   });
+
+  void toggleFavourite() {
+    isFavourite = !isFavourite;
+    notifyListeners();
+  }
 }

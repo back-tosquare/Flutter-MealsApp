@@ -3,8 +3,13 @@ import 'package:flutter/material.dart';
 class ListItem extends StatelessWidget {
   final IconData icon;
   final String text;
+  final String destination;
 
-  ListItem({@required this.icon, @required this.text});
+  ListItem({@required this.icon, @required this.text, this.destination});
+
+  void onTapHandler(BuildContext context) {
+    Navigator.of(context).pushNamed(destination);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +26,7 @@ class ListItem extends StatelessWidget {
           fontSize: 18,
         ),
       ),
+      onTap: () => (destination != null) ? onTapHandler(context) : null,
     );
   }
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import './ListItem.dart';
+import '../HomePage.dart';
+import '../FiltersPage.dart';
 
 class DrawerList extends StatelessWidget {
   @override
@@ -11,10 +13,12 @@ class DrawerList extends StatelessWidget {
           ListItem(
             icon: Icons.fastfood,
             text: "Meals",
+            destination: HomePage.routeName,
           ),
           ListItem(
             icon: Icons.settings,
             text: "Filter",
+            destination: FiltersPage.routeName,
           ),
         ],
       ),

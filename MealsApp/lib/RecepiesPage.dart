@@ -2,11 +2,24 @@ import 'package:flutter/material.dart';
 
 import './recepies/MyRecepies.dart';
 import './utility/DefaultPage.dart';
+import './recepies/configuration/popupMenuWidget.dart';
+import './models/Meals.dart';
 
-class RecepiesPage extends StatelessWidget {
+class RecepiesPage extends StatefulWidget {
   static const String routeName = '/recepies';
 
-  RecepiesPage();
+  @override
+  _RecepiesPageState createState() => _RecepiesPageState();
+}
+
+class _RecepiesPageState extends State<RecepiesPage> {
+  bool _favStatus = false;
+
+  void toggleFavouriteStatusHandler(Selection value) {
+    setState(() {
+      _favStatus = (value == Selection.Favourites) ? true : false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +29,12 @@ class RecepiesPage extends StatelessWidget {
     final String title = routeArguments["title"];
     final String categoryId = routeArguments["id"];
 
-    return DefaultPage(pageTitle: title, pageBody: MyRecepies(categoryId));
+    return DefaultPage(
+      pageTitle: title,
+      pageBody: MyRecepies(categoryId, _favStatus),
+      popupMenuWidget: PopupMenuWidget(
+        selectedHandler: toggleFavouriteStatusHandler,
+      ),
+    );
   }
 }

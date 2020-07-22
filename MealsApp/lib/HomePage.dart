@@ -7,6 +7,8 @@ import './FavouritesPage.dart';
 import './Drawer/MyDrawer.dart';
 
 class HomePage extends StatefulWidget {
+  static const String routeName = '/';
+
   @override
   _HomePageState createState() => _HomePageState();
 }
